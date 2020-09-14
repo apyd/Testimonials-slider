@@ -50,11 +50,27 @@ body {
 }
 
 .column__image {
-    background: url('/assets/img/pattern-bg.svg') no-repeat top -65px left -65px;
-    padding: 0 95px 75px 0;
+    background: url('/assets/img/pattern-bg.svg') no-repeat top 10px left 30px;
+    padding: 75px 95px 75px 95px;
 }
 
-button {
-    border: none;
+.button {
+    background-color: white;
+    border: 1px solid;
+    padding: 30px;
+}
 
+.left-arrow {
+    border-radius: 25px 0 0 25px;
+    background: url('/assets/img/icon-prev.svg') no-repeat center center;
+}
+
+.right-arrow {
+    border-radius: 0 25px 25px 0px;
+    background: url('/assets/img/icon-next.svg') no-repeat center center;
+}
+
+.image {
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 11px -6px #000000; */
 }
