@@ -1,44 +1,55 @@
-html {
+body {
     font-family: 'Inter', sans-serif;
-    font-size: 32px;
+    font-size: 16px;
     font-weight: 300;
+    margin: 0;
+    width:100vw;
+    height: 100vh;
     --dark-blue: hsl(240, 38%, 20%);
     --grayish-blue: hsl(240, 18%, 77%);
-    box-sizing: border-box;
-    display: flex;
-    height: 100vh;
-}
-
-body {
     display: flex;
     align-items: center;
+    justify-content: center;
     background: url('/assets/img/pattern-curve.svg') no-repeat bottom left;
+}
+
+.slider__container {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider__container .column {
+    position: relative;
+    width: 45vw;
+}
+
+.container {
+    position: absolute;
+    right: -100px;
+    z-index: 10;
 }
 
 .row {
     display: flex;
 }
 
-.wrapper {
-    display: flex;
-}
-
-.column__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .quote--text {
     color: var(--dark-blue);
+    font-size: calc(1rem + 1vmin);
     letter-spacing: 1px;
+    line-height: 2rem;
     padding-top: 70px;
     background: url('/assets/img/pattern-quotes.svg') no-repeat top left 100px;
 }
 
 .quote--author {
     color: var(--dark-blue);
-    font-size: .8rem;
+    font-size: calc(.5rem + 1vmin);
     font-weight: 700;
     margin-right: 15px;
 }
@@ -46,31 +57,12 @@ body {
 .quote--role {
     color: var(--grayish-blue);
     font-weight: 500;
-    font-size: .8rem;
+    font-size: calc(.5rem + 1vmin);
 }
 
-.column__image {
-    background: url('/assets/img/pattern-bg.svg') no-repeat top 10px left 30px;
-    padding: 75px 95px 75px 95px;
-}
-
-.button {
-    background-color: white;
-    border: 1px solid;
-    padding: 30px;
-}
-
-.left-arrow {
-    border-radius: 25px 0 0 25px;
-    background: url('/assets/img/icon-prev.svg') no-repeat center center;
-}
-
-.right-arrow {
-    border-radius: 0 25px 25px 0px;
-    background: url('/assets/img/icon-next.svg') no-repeat center center;
-}
-
-.image {
-    border-radius: 5px;
-    /* box-shadow: 2px 2px 11px -6px #000000; */
+.slider__img {
+    height: auto;
+    width: 40vw;
+    min-width: 375px;
+    max-width: 550px;
 }
