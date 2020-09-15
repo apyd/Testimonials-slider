@@ -10,7 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('/assets/img/pattern-curve.svg') no-repeat bottom left;
+    background: url('assets/img/pattern-curve.svg') no-repeat bottom left;
 }
 
 .slider__container {
@@ -44,7 +44,7 @@ body {
     letter-spacing: 1px;
     line-height: 2rem;
     padding-top: 70px;
-    background: url('/assets/img/pattern-quotes.svg') no-repeat top left 100px;
+    background: url('assets/img/pattern-quotes.svg') no-repeat top left 100px;
 }
 
 .quote--author {
