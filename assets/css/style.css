@@ -36,7 +36,7 @@ body {
     }
 
 .column:last-child {
-    background: url('../assets/img/pattern-bg.svg') no-repeat top right;
+    background: url('../img/pattern-bg.svg') no-repeat top right;
     background-size: contain;
     flex: 1;
     padding: 60px 80px 40px 50px;
@@ -98,12 +98,12 @@ body {
 
 .btn--left {
     border-radius: 20px 0 0 20px;
-    background: url('../assets/img/icon-prev.svg') no-repeat center center;
+    background: url('../img/icon-prev.svg') no-repeat center center;
     padding: 25px 30px 25px 20px;
 }
 
 .btn--right {
     border-radius: 0 20px 20px 0;
-    background: url('../assets/img/icon-next.svg') no-repeat center center;
+    background: url('../img/icon-next.svg') no-repeat center center;
     padding: 25px 20px 25px 30px;
 }
