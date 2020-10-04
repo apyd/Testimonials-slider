@@ -17,11 +17,16 @@ body {
     background: url('../img/pattern-curve.svg') no-repeat bottom left;
 }
 
-.slider__container {
+.slider {
     display: flex;
     flex: 1;
     margin: 0 30px 0 50px;
     max-width: 1024px;
+}
+
+.slide__wrapper {
+    display: flex;
+    width: 100%;
 }
 
 .column {
@@ -33,7 +38,7 @@ body {
 .column:first-child {
     position: relative;
     flex: 1;
-    }
+}
 
 .column:last-child {
     background: url('../img/pattern-bg.svg') no-repeat top right;
@@ -42,7 +47,7 @@ body {
     padding: 60px 80px 40px 50px;
 }
 
-.container {
+.text__wrapper {
     position: absolute;
     right: -120px;
     z-index: 10;
@@ -74,11 +79,11 @@ body {
     font-size: 1.4vw;
     }
 
-.elements {
+.img__wrapper {
     position: relative;
 }
 
-.slider__img {
+.img {
     height: auto;
     width: 100%;
     min-width: 300px;
@@ -87,7 +92,7 @@ body {
     border-radius: 5px;
 }
 
-.slider__btns {
+.img__btns {
     display: flex;
     position: absolute;
     bottom: -15px;

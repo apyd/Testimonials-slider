@@ -1,6 +1,6 @@
 const prevButtons = document.querySelectorAll('.btn--left');
 const nextButtons = document.querySelectorAll('.btn--right');
-const slides = document.querySelectorAll('.slider__container');
+const slides = document.querySelectorAll('.slide__wrapper');
 let activeSlideId = 0;
  
 // On DOM load show only first slider - 
