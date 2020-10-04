@@ -6,12 +6,12 @@
     <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon-32x32.png"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
-<div class="slider__container">
+<main class="slider">
+  <div class="slider__container">
   <div class="column">
     <div class="container">
     <p class="quote--text">“ I’ve been interested in coding for a while but never taken the jump, until now. 
@@ -25,14 +25,40 @@
 </div>
 <div class="column">
   <div class="elements">
-    <img class="slider__img" src="./assets/img/image-tanya.jpg" alt="Tanya photo">
+    <img class="slider__img" src="./assets/img/image-tanya.jpg" alt="Tanya's photo">
     <div class="slider__btns">
-      <div class="btn--left"></div>
-      <div class="btn--right"></div>
+      <button class="btn btn--left"></button>
+      <button class="btn btn--right"></button>
     </div>
     </div>
-</div>
+    </div>
+    </div>
+
+    <div class="slider__container">
+      <div class="column">
+        <div class="container">
+          <p class="quote--text">“ If you want to lay the best foundation possible I’d recommend taking this course.
+            The depth the instructors go into is incredible. I now feel so confident about
+            starting up as a professional developer. ”</p>
+          <div class="row">
+            <p class="quote--author">John Tarkpor</p>
+            <p class="quote--role">Junior Front-end Developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="elements">
+          <img class="slider__img" src="./assets/img/image-john.jpg" alt="John's photo">
+    <div class="slider__btns">
+      <button class="btn btn--left"></button>
+      <button class="btn btn--right"></button>
+    </div>
+    </div>
+  </div>
 </div>
 
+</main>
+
+<script src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -97,12 +97,14 @@ body {
 }
 
 .btn--left {
+    border: none;
     border-radius: 20px 0 0 20px;
     background: url('../img/icon-prev.svg') no-repeat center center;
     padding: 25px 30px 25px 20px;
 }
 
 .btn--right {
+    border: none;
     border-radius: 0 20px 20px 0;
     background: url('../img/icon-next.svg') no-repeat center center;
     padding: 25px 20px 25px 30px;
