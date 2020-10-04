@@ -7,24 +7,23 @@ let activeSlideId = 0;
 // by default it's 0 but by changing activeSliderId it may start with different slide;
 document.addEventListener('DOMContentLoaded', () => {
     slides.forEach((slide, i) => {
-        // add id number to each slider container
-        slide.dataset.slideId = i;
         // hide all slides beside the one with id set in activeSliderId
         i !== activeSlideId ? slides[i].style.display = 'none' : null;
     })
 })
+
 prevButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => switchToPreviousSlide(+e.path[4].dataset.slideId));
+    btn.addEventListener('click', switchToPreviousSlide);
 });
             
 nextButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => switchToNextSlide(+e.path[4].dataset.slideId));
+    btn.addEventListener('click', switchToNextSlide);
 });
 
-function switchToPreviousSlide(slideId) {
+function switchToPreviousSlide() {
     if (activeSlideId > 0) {
         slides[activeSlideId].style.display = 'none';
-        slides[slideId - 1].style.display = 'flex';
+        slides[activeSlideId - 1].style.display = 'flex';
         activeSlideId--;
     }
     else {
@@ -34,10 +33,10 @@ function switchToPreviousSlide(slideId) {
     }
 }
 
-function switchToNextSlide(slideId) {
+function switchToNextSlide() {
     if (activeSlideId < slides.length - 1) {
         slides[activeSlideId].style.display = 'none';
-        slides[slideId + 1].style.display = 'flex';
+        slides[activeSlideId + 1].style.display = 'flex';
         activeSlideId++;
     }
     else {
