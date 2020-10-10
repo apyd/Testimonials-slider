@@ -120,6 +120,20 @@ body {
     background: url('../img/icon-next.svg') no-repeat center center;
     padding: 25px 20px 25px 30px;
 }
+
+.loading {
+    animation: 1s ease-out 0s 1 animateSlideLoad;
+}
+
+@keyframes animateSlideLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 700px) {
     .slider {
         width: 100%;
@@ -153,7 +167,7 @@ body {
     }
 
     .quote--text {
-        background-position: center top;
+        background-position: center top 20px;
         text-align: center; 
         padding-top: 50px;
         font-size: min(20px, 3vw);
