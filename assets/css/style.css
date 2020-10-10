@@ -1,5 +1,12 @@
-* {
+html {
     box-sizing: border-box;
+    height: 100vh;
+  }
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -7,14 +14,13 @@ body {
     font-size: 16px;
     font-weight: 300;
     margin: 0;
-    width:100vw;
     height: 100vh;
     --dark-blue: hsl(240, 38%, 20%);
     --grayish-blue: hsl(240, 18%, 77%);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../img/pattern-curve.svg') no-repeat bottom left;
+    background: url('../img/pattern-curve.svg') no-repeat bottom -50px left -80px;
 }
 
 .slider {
@@ -26,6 +32,7 @@ body {
 
 .slide__wrapper {
     display: flex;
+    justify-content: center;
     width: 100%;
 }
 
@@ -33,7 +40,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-sizing: border-box;
 }
 
 .column:first-child {
@@ -44,8 +50,8 @@ body {
 .column:last-child {
     background: url('../img/pattern-bg.svg') no-repeat top right;
     background-size: contain;
-    flex: 1;
     padding: 60px 80px 40px 50px;
+    flex: 1;
 }
 
 .text__wrapper {
@@ -60,16 +66,17 @@ body {
 
 .quote--text {
     color: var(--dark-blue);
-    font-size: 1.9vw;
+    font-size: min(26px, 1.9vw);
     letter-spacing: 1px;
     line-height: 2rem;
     padding-top: 70px;
     background: url('../img/pattern-quotes.svg') no-repeat top left 100px;
+    background-size: 20%;
 }
 
 .quote--author {
     color: var(--dark-blue);
-    font-size: 1.4vw;
+    font-size: min(22px, 1.5vw);
     font-weight: 700;
     margin-right: 15px;
 }
@@ -77,7 +84,7 @@ body {
 .quote--role {
     color: var(--grayish-blue);
     font-weight: 500;
-    font-size: 1.4vw;
+    font-size: min(22px, 1.5vw);
     }
 
 .img__wrapper {
@@ -87,8 +94,6 @@ body {
 .img {
     height: auto;
     width: 100%;
-    min-width: 250px;
-    max-width: 550px;
     box-shadow: 0px 15px 35px -20px var(--dark-blue);
     border-radius: 5px;
 }
@@ -116,28 +121,25 @@ body {
     padding: 25px 20px 25px 30px;
 }
 @media (max-width: 700px) {
-
     .slider {
         width: 100%;
         height: 100%;
-        margin: 0;
+        margin: 0 30px 0 30px;
     }
 
     .slide__wrapper {
         flex-direction: column;
-        padding: 20px;
-    }
-
-    .column {
-        box-sizing: border-box;
     }
 
     .column:first-child {
         order: 2;
+        flex: none;
+        margin-top:20px;
     }
 
     .column:last-child {
         order: 1;
+        flex: none;
     }
 
     .text__wrapper {
@@ -145,14 +147,16 @@ body {
     }
 
     .quote--text, .quote--role, .quote--author {
-        font-size: 4vw;
+        font-size: min(16px, 2.5vw);
         margin: 0;
         padding: 0;
     }
 
     .quote--text {
         background-position: center top;
-        text-align: center;    
+        text-align: center; 
+        padding-top: 50px;
+        font-size: min(20px, 3vw);
     }
 
     .row {
@@ -163,6 +167,18 @@ body {
     }
 
     .img__btns {
-        left: 40%;
+        left: 35%;
     }
+}
+
+@media (max-height: 700px) {
+
+    body {
+        height: 100%;
+    }
+
+    .slide__wrapper {
+        margin: 20px 30px 20px 30px;
+        justify-content: start;
+}
 }
